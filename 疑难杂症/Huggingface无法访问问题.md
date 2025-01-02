@@ -18,6 +18,9 @@ Checkout your internet connection or see how to run the library in offline mode 
 ce.co/docs/transformers/installation#offline-mode'.
 
 ## 解决方法：
+```
 import os
 os.environ['HF_ENDPOINT'] = 'https://hf-mirror.com'
 from transformers import BertModel
+
+```
