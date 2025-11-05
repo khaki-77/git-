@@ -5,9 +5,7 @@
 
 名称  接口URL                请求方式      URL接口参数            JSON参数
 
-登录  https://.../login      POST         "application":"web"   {"username":"xiaoming","pwd":"12346"}
-
-
+登录  https://.../login      POST         {"application":"web"}   {"username":"xiaoming","pwd":"12346"}
 ```
 test_data=xfile.read("接口测试用例.xls").excel_to_dict(sheet=1)
 
