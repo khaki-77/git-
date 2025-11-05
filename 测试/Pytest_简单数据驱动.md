@@ -1,8 +1,10 @@
 # pytest
 
 ## 简单数据驱动
+接口测试用例.xls：
 
 名称  接口URL                请求方式      URL接口参数            JSON参数
+
 登录  https://.../login      POST         "application":"web"   {"username":"xiaoming","pwd":"12346"}
 
 ```
@@ -13,7 +15,7 @@ test_data=xfile.read("接口测试用例.xls").excel_to_dict(sheet=1)
 //eval()：根据字符串的格式，自动把字符串变成对应的数据结构
 
 //接口之间有关联性：向关联接口赋值
-
+dic = {}
 @pytest.mark.paramtrize("case_info",test__data)
 def test_exceute(case_info):
   resp1=requests.request(url=case_info["接口URL"]，
